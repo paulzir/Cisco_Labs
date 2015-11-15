@@ -9,4 +9,4 @@ More about configuration soon....
 
 
 
-![Alt text](https://raw.githubusercontent.com/paulzir/6.Enterprise--VPN_IPsec_Tunnel/master/Enterprise_IPsec%20VPN%20Tunnel.jpg)
+![Alt text](https://raw.githubusercontent.com/paulzir/Cisco_Labs/master/6.Enterprise%2BVPN%20IPsec%20Tunnel/Enterprise_IPsec%20VPN%20Tunnel.jpg)
