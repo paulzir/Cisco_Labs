@@ -1,6 +1,6 @@
 # Enterprise_OSPF_PPP_Servers
 
-Download and check the Enterprise_OSPF_PPP_Servers.pkt file.<br/>
+Download and check the Enterprise_OSPF_PPP_Servers.pkt file. (Packet Tracer version 6.01)<br/>
 
 In this task there are some extra features added to initial network implementation:<br/>
 

@@ -1,6 +1,6 @@
 # Packet-Tracer-Cisco-Projects
 
-Download and check the Small Enterprise.pkt file.<br/>
+Download and check the Small Enterprise.pkt file. (Packet Tracer version 6.01)<br/>
 
 The specific Cisco project describes a potential Enterprise Network Model.<br/>
 In detail it includes the following main tasks:<br/>
