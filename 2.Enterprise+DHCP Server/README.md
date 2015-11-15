@@ -1,5 +1,4 @@
 # 2.Enterprise--DHCP-Server
-Enterprise Network + DHCP Server
 
 Download and check the Enterprise_DHCP.pkt file. (Packet Tracer version 6.01)<br/>
 
