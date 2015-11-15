@@ -1,4 +1,4 @@
-# Router_on_a_Stick--Packet_Tracer_Cisco_Projects
+# Router_on_a_Stick
 
 Download and check the Router on a Stick.pkt file.<br/>
 
