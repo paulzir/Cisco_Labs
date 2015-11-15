@@ -9,4 +9,4 @@ In this task there are some extra features added to initial network implementati
 3. Add and configure some Server services (HTTP, DNS, FTP, Email)
 4. Insert Access Point service.
 
-![Alt text](https://raw.githubusercontent.com/paulzir/Enterprise_OSPF_PPP_Servers/master/Enterprise_OSPF_PPP_Servers.JPG)
+![Alt text](https://raw.githubusercontent.com/paulzir/Cisco_Labs/master/3.Enterprise%2BOSPF%2BPPP%2BServers/Enterprise_OSPF_PPP_Servers.JPG)
