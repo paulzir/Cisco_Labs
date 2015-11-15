@@ -12,4 +12,4 @@ In few lines, this requires the following configuration:<br/>
 Also, in this task we have configured the ISP router as DHCP Server.<br/>
 Thus, the public interfaces of the Enterprise Routers receive dynamically IP configuration.
 
-![Alt text](https://raw.githubusercontent.com/paulzir/4.Enterprise--Public_Internet/master/Enterprise_Public-Internet.jpg)
+![Alt text](https://raw.githubusercontent.com/paulzir/Cisco_Labs/master/4.Enterprise%2BPublic%20Internet/Enterprise_Public-Internet.jpg)
