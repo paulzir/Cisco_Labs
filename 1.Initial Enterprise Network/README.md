@@ -13,4 +13,4 @@ In detail it includes the following main tasks:<br/>
 7. Implementation of Static Routing<br/>
 8. Telnet Access to switch<br/>
 
-![Alt text](https://raw.githubusercontent.com/paulzir/Enterprise_Network--Packet_Tracer_Cisco_Projects/master/small_enterprise.jpg)
+![Alt text](https://raw.githubusercontent.com/paulzir/Cisco_Labs/master/1.Initial%20Enterprise%20Network/small_enterprise.jpg)
