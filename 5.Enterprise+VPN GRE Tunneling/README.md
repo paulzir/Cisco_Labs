@@ -6,4 +6,4 @@ In this lab we apply VPN GRE Tunneling between Enterprise Routers (Head and Nort
 
 More about configuration soon....
 
-![Alt text](https://raw.githubusercontent.com/paulzir/5.Enterprise--VPN_GRE_Tunneling/master/Enterprise_VPN%20GRE%20Tunneling.jpg)
+![Alt text](https://github.com/paulzir/Cisco_Labs/blob/master/5.Enterprise%2BVPN%20GRE%20Tunneling/Enterprise_VPN%20GRE%20Tunneling.jpg)
