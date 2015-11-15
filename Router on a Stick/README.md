@@ -11,4 +11,4 @@ In detail it includes the following main tasks:<br/>
 5. ssh configuration on the Router<br/>
 
 
-![Alt text](https://raw.githubusercontent.com/paulzir/Router_on_a_Stick--Packet_Tracer_Cisco_Projects/master/router%20on%20a%20stick.JPG)
+![Alt text](https://raw.githubusercontent.com/paulzir/Cisco_Labs/master/Router%20on%20a%20Stick/router%20on%20a%20stick.JPG)
