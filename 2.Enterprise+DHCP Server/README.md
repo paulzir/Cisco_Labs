@@ -14,4 +14,4 @@ This implementation demands the following steps:<br/>
 7. If there is need of Relay Agents, configure ip helper-address command 
 to the appropriate Relay Agent interfaces. 
 
-![Alt text]https://raw.githubusercontent.com/paulzir/Cisco_Labs/master/2.Enterprise%2BDHCP%20Server/Small%20Enterprice_DHCP.JPG)
+![Alt text](https://raw.githubusercontent.com/paulzir/Cisco_Labs/master/2.Enterprise%2BDHCP%20Server/Small%20Enterprice_DHCP.JPG)
