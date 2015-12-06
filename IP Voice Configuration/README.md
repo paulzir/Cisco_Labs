@@ -1,16 +1,8 @@
-# Packet-Tracer-Cisco-Projects
 
-Download and check the Small Enterprise.pkt file. (Packet Tracer version 6.01)<br/>
+Download and check the voip.pkt file. (Packet Tracer Student version 6.02)<br/>
 
-The specific Cisco project describes a potential Enterprise Network Model.<br/>
-In detail it includes the following main tasks:<br/>
-1. Implementation of Cisco's Three-tier Hierarchical Network Model<br/>
-2. IP addressing planning<br/>
-3. Implementation and creation of Vlans<br/>
-4. Implementation of VTP protocol<br/>
-5. Implementation of Intervlan Routing Through MultiLayer Switch<br/>
-6. Adding Serial Interfaces. Use of the default Cisco WAN protocol HDLC<br/>
-7. Implementation of Static Routing<br/>
-8. Telnet Access to switch<br/>
+This Cisco lab includes the configuration of  IP Voice communication within an Interlan LAN Network and between remote sites through serial link (WAN Network).<br/>
+Details can be found within the configuration folder:<br/>
 
-![Alt text](https://raw.githubusercontent.com/paulzir/Cisco_Labs/master/1.Initial%20Enterprise%20Network/small_enterprise.jpg)
+
+![Alt text](https://raw.githubusercontent.com/paulzir/Cisco_Labs/master/IP%20Voice%20Configuration/voip.jpg)
