@@ -1,0 +1,121 @@
+Current configuration : 1438 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname CME1
+!
+!
+!
+!
+ip dhcp excluded-address 192.168.20.1
+!
+ip dhcp pool voice
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ option 150 ip 192.168.20.1
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+!
+interface FastEthernet0/1.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+!
+interface Serial0/0/0
+ ip address 1.1.1.1 255.255.255.252
+ clock rate 128000
+!
+interface Serial0/0/1
+ no ip address
+ clock rate 2000000
+!
+interface Vlan1
+ no ip address
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 1.1.1.2 
+!
+ip flow-export version 9
+!
+!
+!
+no cdp run
+!
+!
+!
+!
+!
+dial-peer voice 1 voip
+ destination-pattern 40.
+ session target ipv4:1.1.1.2
+!
+telephony-service
+ max-ephones 2
+ max-dn 2
+ ip source-address 192.168.20.1 port 2000
+!
+ephone-dn 1
+ number 201
+!
+ephone-dn 2
+ number 202
+!
+ephone 1
+ device-security-mode none
+ mac-address 0000.0C04.E0D3
+ type 7960
+ button 1:1
+!
+ephone 2
+ device-security-mode none
+ mac-address 0000.0C35.400A
+ type 7960
+ button 1:2
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
