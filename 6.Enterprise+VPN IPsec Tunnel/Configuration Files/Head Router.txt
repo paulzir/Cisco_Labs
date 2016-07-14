@@ -1,0 +1,110 @@
+Head#show running-config 
+Building configuration...
+
+Current configuration : 1808 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Head
+!
+!
+!
+!
+!
+!
+!
+!
+username East password 0 cisco
+!
+crypto isakmp policy 1
+ encr 3des
+ hash md5
+ authentication pre-share
+ group 2
+!
+crypto isakmp key secureme address 1.1.1.6
+!
+!
+crypto ipsec transform-set myset esp-3des esp-md5-hmac
+!
+crypto map CMAP 10 ipsec-isakmp 
+ set peer 1.1.1.6
+ set transform-set myset 
+ match address VPN-traffic
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.2.4 255.255.255.0
+ ip nat inside
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/3/0
+ ip address 176.14.20.102 255.255.255.252
+ encapsulation ppp
+ ppp authentication chap
+ ip nat inside
+!
+interface Serial0/3/1
+ ip address 1.1.1.2 255.255.255.252
+ ip nat outside
+ crypto map CMAP
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 100
+ log-adjacency-changes
+ network 192.168.0.0 0.0.255.255 area 0
+ network 176.14.20.100 0.0.0.3 area 0
+!
+router rip
+!
+ip nat inside source list 100 interface Serial0/3/1 overload
+ip classless
+ip route 0.0.0.0 0.0.0.0 1.1.1.1 
+!
+!
+ip access-list extended VPN-traffic
+ permit ip 192.168.0.0 0.0.255.255 172.16.0.0 0.0.255.255
+ permit ip 10.10.0.0 0.0.255.255 172.16.0.0 0.0.255.255
+access-list 2 permit 192.168.0.0 0.0.255.255
+access-list 2 permit 10.10.0.0 0.0.255.255
+access-list 100 remark -Define Nat Service-
+access-list 100 deny ip 192.168.0.0 0.0.255.255 172.16.0.0 0.0.255.255
+access-list 100 deny ip 10.10.0.0 0.0.255.255 172.16.0.0 0.0.255.255
+access-list 100 permit ip 192.168.0.0 0.0.255.255 any
+access-list 100 permit ip 10.10.0.0 0.0.255.255 any
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end

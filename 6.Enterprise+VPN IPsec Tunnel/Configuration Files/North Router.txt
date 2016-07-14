@@ -1,0 +1,96 @@
+Router#show running-config 
+Building configuration...
+
+Current configuration : 1408 bytes
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+crypto isakmp policy 1
+ encr 3des
+ hash md5
+ authentication pre-share
+ group 2
+!
+crypto isakmp key secureme address 1.1.1.2
+!
+!
+crypto ipsec transform-set myset esp-3des esp-md5-hmac
+!
+crypto map CMAP 10 ipsec-isakmp 
+ set peer 1.1.1.2
+ set transform-set myset 
+ match address VPN-traffic
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 172.16.1.1 255.255.255.0
+ ip nat inside
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/3/0
+ ip address 1.1.1.6 255.255.255.252
+ ip nat outside
+ crypto map CMAP
+!
+interface Serial0/3/1
+ no ip address
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip nat inside source list 100 interface Serial0/3/0 overload
+ip classless
+ip route 0.0.0.0 0.0.0.0 1.1.1.5 
+!
+!
+ip access-list extended VPN-traffic
+ permit ip 172.16.0.0 0.0.255.255 192.168.0.0 0.0.255.255
+ permit ip 172.16.0.0 0.0.255.255 10.10.0.0 0.0.255.255
+access-list 1 permit any
+access-list 100 deny ip 172.16.0.0 0.0.255.255 192.168.0.0 0.0.255.255
+access-list 100 deny ip 172.16.0.0 0.0.255.255 10.10.0.0 0.0.255.255
+access-list 100 permit ip 172.16.0.0 0.0.255.255 any
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
